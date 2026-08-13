@@ -16,12 +16,13 @@ def submit_lead(request):
     if serializer.is_valid():
         # Save the lead to the database (Django Admin)
         lead = serializer.save()
+        85
         
         # Prepare the email using Resend
         try:
             params = {
                 "from": "Acme <onboarding@resend.dev>", # Replace with your verified domain later
-                "to": ["your_email@example.com"], # Replace with your actual admin email
+                "to": ["xlr8developers@gmail.com"], # Replace with your actual admin email
                 "subject": f"New Project Lead: {lead.name}",
                 "html": f"""
                     <h2>New Lead from xlr8 devs</h2>
@@ -42,3 +43,4 @@ def submit_lead(request):
              return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
              
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
