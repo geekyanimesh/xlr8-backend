@@ -20,7 +20,6 @@ class Lead(models.Model):
     name = models.CharField(max_length=100)
     email = models.EmailField()
     scope = models.TextField()
-    budget_range = models.CharField(max_length=100)
     timeline = models.CharField(max_length=100)
     submitted_at = models.DateTimeField(auto_now_add=True)
     
