@@ -130,5 +130,12 @@ STATIC_URL = 'static/'
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
     "https://xlr8-frontend.vercel.app", 
+    "https://xlr8devs.me",
+    "https://www.xlr8devs.me",
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://xlr8devs.me",
+    "https://www.xlr8devs.me",
 ]
 
